@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="alban.gps.MainActivity">
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/my_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="96dp"
+        tools:layout_editor_absoluteY="160dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#D9FFFFFF"
+        android:onClick="translationClick"
+        android:id="@+id/relative"
+        android:visibility="gone"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:src="@drawable/up_arrow"
+            android:id="@+id/arrow" />
+
+        <Spinner
+            android:id="@+id/spinnerFrom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_below="@+id/arrow"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="coordonnées"
+            android:layout_below="@id/spinnerFrom"
+            android:layout_alignParentStart="true"
+            android:id="@+id/coordoFrom" />
+
+        <Spinner
+            android:id="@+id/spinnerTo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_below="@+id/coordoFrom"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="coordonnées"
+            android:layout_below="@+id/spinnerTo" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Run"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/arrow"
+            android:id="@+id/buttonRun"
+            android:layout_marginTop="10dp"
+            android:onClick="run"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Show Details"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="23dp"
+            android:layout_below="@id/buttonRun"
+            android:onClick="showDetails"/>
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
